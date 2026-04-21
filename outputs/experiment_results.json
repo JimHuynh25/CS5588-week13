@@ -1,0 +1,64 @@
+{
+  "experiment_results": [
+    {
+      "sample_id": 0,
+      "data": {
+        "animal_type": "rabbit",
+        "breed": "Lionhead",
+        "condition": "injured",
+        "environment": "farm"
+      },
+      "prompt_data": {
+        "positive": "Realistic depiction of a Lionhead rabbit with injury in farm, veterinary care setting, realistic photograph, high detail, professional photography, AI-generated illustration for educational purposes",
+        "negative": "blurry, low quality, distorted, ugly, deformed, disfigured, cartoon, anime, illustration, painting, drawing, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+        "data": {
+          "animal_type": "rabbit",
+          "breed": "Lionhead",
+          "condition": "injured",
+          "environment": "farm"
+        }
+      },
+      "demo_mode": true
+    },
+    {
+      "sample_id": 1,
+      "data": {
+        "animal_type": "cat",
+        "breed": "Ragdoll",
+        "condition": "elderly",
+        "environment": "farm"
+      },
+      "prompt_data": {
+        "positive": "An elderly Ragdoll cat in farm, showing signs of age gracefully, realistic photograph, high detail, professional photography, AI-generated illustration for educational purposes",
+        "negative": "blurry, low quality, distorted, ugly, deformed, disfigured, cartoon, anime, illustration, painting, drawing, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+        "data": {
+          "animal_type": "cat",
+          "breed": "Ragdoll",
+          "condition": "elderly",
+          "environment": "farm"
+        }
+      },
+      "demo_mode": true
+    },
+    {
+      "sample_id": 2,
+      "data": {
+        "animal_type": "horse",
+        "breed": "Mustang",
+        "condition": "healthy",
+        "environment": "farm"
+      },
+      "prompt_data": {
+        "positive": "A healthy Mustang horse in a farm, looking vibrant and energetic, realistic photograph, high detail, professional photography, AI-generated illustration for educational purposes",
+        "negative": "blurry, low quality, distorted, ugly, deformed, disfigured, cartoon, anime, illustration, painting, drawing, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+        "data": {
+          "animal_type": "horse",
+          "breed": "Mustang",
+          "condition": "healthy",
+          "environment": "farm"
+        }
+      },
+      "demo_mode": true
+    }
+  ]
+}
