@@ -11,7 +11,7 @@ def test_data_loader():
 
     assert len(samples) == 2
     assert all(key in samples[0] for key in ['animal_type', 'breed', 'condition', 'environment'])
-    print("✓ Data loader test passed")
+    print("Data loader test passed")
 
 def test_prompt_generator():
     """Test prompt generator functionality."""
@@ -26,14 +26,16 @@ def test_prompt_generator():
     }
 
     prompt = generator.generate_prompt(data)
+    educational_prompt = generator.generate_prompt(data, style="educational")
     negative = generator.generate_negative_prompt()
 
     assert 'Golden Retriever' in prompt
     assert 'dog' in prompt
     assert 'healthy' in prompt
     assert 'home' in prompt
+    assert 'veterinary reference image' in educational_prompt
     assert len(negative) > 0
-    print("✓ Prompt generator test passed")
+    print("Prompt generator test passed")
 
 def test_imports():
     """Test that all modules can be imported."""
@@ -43,9 +45,9 @@ def test_imports():
         import image_generator
         import evaluator
         import main
-        print("✓ All modules imported successfully")
+        print("All modules imported successfully")
     except ImportError as e:
-        print(f"✗ Import error: {e}")
+        print(f"Import error: {e}")
         return False
     return True
 

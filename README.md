@@ -39,6 +39,17 @@ Run the main experiment:
 python main.py
 ```
 
+Choose the output style:
+```bash
+$env:IMAGE_STYLE="realistic"; python main.py
+```
+
+or
+
+```bash
+$env:IMAGE_STYLE="educational"; python main.py
+```
+
 This will:
 - Generate sample animal data
 - Create structured prompts
@@ -68,6 +79,8 @@ The system is designed to work with:
 - Oxford-IIIT Pet Dataset
 - AFHQ Dataset (Animal Faces)
 - Stanford Dogs Dataset
+
+These datasets are excellent for improving breed realism and animal appearance consistency. At the moment, this repo uses structured metadata and synthetic sample records by default; the datasets are not automatically downloaded or ingested yet.
 
 ## AI Tools Used
 

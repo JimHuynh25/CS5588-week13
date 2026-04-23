@@ -44,39 +44,50 @@ class PromptGenerator:
 
         # Negative prompts to avoid unwanted elements
         self.negative_prompts = [
-            "blurry, low quality, distorted, ugly, deformed, disfigured",
-            "cartoon, anime, illustration, painting, drawing",
+            "blurry, low quality, distorted, ugly, deformed, disfigured, bad anatomy, malformed face, asymmetrical eyes",
+            "cartoon, anime, illustration, painting, drawing, cgi, 3d render, digital art, oversaturated",
+            "close-up portrait, cropped, out of frame, duplicate animal, extra limbs, extra ears, fused features",
             "human, person, people, crowd, text, watermark",
             "violent, scary, frightening, harmful, dangerous"
         ]
 
+        self.supported_styles = {"realistic", "educational", "artistic"}
+
     def generate_prompt(self, data: Dict[str, Any], style: str = "realistic") -> str:
         """Generate a detailed prompt from structured data."""
+        style = style.strip().lower()
+        if style not in self.supported_styles:
+            style = "realistic"
+
         animal_type = data['animal_type']
         breed = data['breed']
         condition = data['condition']
         environment = data['environment']
 
-        # Select random template for the condition
-        templates = self.condition_templates.get(condition, self.condition_templates['healthy'])
-        template = random.choice(templates)
+        override = data.get('prompt_override')
+        if override:
+            prompt = override.strip()
+        else:
+            # Select random template for the condition
+            templates = self.condition_templates.get(condition, self.condition_templates['healthy'])
+            template = random.choice(templates)
 
-        # Fill in the template
-        prompt = template.format(
-            breed=breed,
-            animal_type=animal_type,
-            environment=environment
-        )
+            # Fill in the template
+            prompt = template.format(
+                breed=breed,
+                animal_type=animal_type,
+                environment=environment
+            )
 
         # Add style and quality descriptors
         if style == "realistic":
-            prompt += ", realistic photograph, high detail, professional photography"
+            prompt += ", realistic veterinary photograph, photorealistic, natural lighting, high detail, professional photography"
         elif style == "educational":
-            prompt += ", educational illustration, clear and informative, medical accuracy"
+            prompt += ", educational veterinary reference image, clinically clear, informative composition, medically accurate, realistic anatomy"
         elif style == "artistic":
             prompt += ", artistic representation, beautiful composition"
 
-        prompt += ", AI-generated illustration for educational purposes"
+        prompt += ", AI-generated content for educational purposes"
 
         return prompt
 
@@ -92,14 +103,15 @@ class PromptGenerator:
             prompts.append(prompt)
         return prompts
 
-    def create_structured_prompt(self, data: Dict[str, Any]) -> Dict[str, str]:
+    def create_structured_prompt(self, data: Dict[str, Any], style: str = "realistic") -> Dict[str, str]:
         """Create a complete prompt structure with positive and negative prompts."""
-        positive = self.generate_prompt(data)
+        positive = self.generate_prompt(data, style=style)
         negative = self.generate_negative_prompt()
 
         return {
             'positive': positive,
             'negative': negative,
+            'style': style,
             'data': data
         }
 

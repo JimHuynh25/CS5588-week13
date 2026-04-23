@@ -1,0 +1,9 @@
+[
+  {
+    "animal_type": "rabbit",
+    "breed": "Lionhead",
+    "condition": "injured",
+    "environment": "farm barn",
+    "prompt_override": "Full-body Lionhead rabbit standing naturally on straw in a farm barn, small bandage on front leg, receiving gentle care, realistic anatomy, realistic fur texture, documentary-style veterinary photograph"
+  }
+]

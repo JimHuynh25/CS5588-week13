@@ -1,0 +1,23 @@
+[
+  {
+    "animal_type": "cat",
+    "breed": "Ragdoll",
+    "condition": "elderly",
+    "environment": "veterinary clinic",
+    "prompt_override": "Full-body elderly Ragdoll cat standing naturally in a veterinary clinic, soft long fur, visible signs of age, realistic animal proportions, a veterinarian softly blurred in the background, documentary-style veterinary photo"
+  },
+  {
+    "animal_type": "horse",
+    "breed": "Mustang",
+    "condition": "healthy",
+    "environment": "equine veterinary clinic",
+    "prompt_override": "Full-body healthy Mustang horse in an equine veterinary clinic, strong posture, vibrant coat, realistic anatomy, veterinary staff in the background, documentary-style veterinary photograph"
+  },
+  {
+    "animal_type": "rabbit",
+    "breed": "Lionhead",
+    "condition": "injured",
+    "environment": "veterinary clinic",
+    "prompt_override": "Full-body injured Lionhead rabbit in a veterinary clinic, visible minor injury on front leg, receiving care, realistic fur texture, realistic anatomy, a veterinarian in the background, documentary-style veterinary photo"
+  }
+]

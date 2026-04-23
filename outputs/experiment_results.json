@@ -3,32 +3,110 @@
     {
       "sample_id": 0,
       "data": {
-        "animal_type": "bird",
-        "breed": "Parrot",
-        "condition": "sick",
-        "environment": "home"
+        "animal_type": "cat",
+        "breed": "Ragdoll",
+        "condition": "elderly",
+        "environment": "veterinary clinic",
+        "prompt_override": "Full-body elderly Ragdoll cat standing naturally in a veterinary clinic, soft long fur, visible signs of age, realistic animal proportions, a veterinarian softly blurred in the background, documentary-style veterinary photo"
       },
       "prompt_data": {
-        "positive": "Medical visualization of a Parrot bird with health condition in home, realistic photograph, high detail, professional photography, AI-generated illustration for educational purposes",
-        "negative": "blurry, low quality, distorted, ugly, deformed, disfigured, cartoon, anime, illustration, painting, drawing, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+        "positive": "Full-body elderly Ragdoll cat standing naturally in a veterinary clinic, soft long fur, visible signs of age, realistic animal proportions, a veterinarian softly blurred in the background, documentary-style veterinary photo, realistic veterinary photograph, photorealistic, natural lighting, high detail, professional photography, AI-generated content for educational purposes",
+        "negative": "blurry, low quality, distorted, ugly, deformed, disfigured, bad anatomy, malformed face, asymmetrical eyes, cartoon, anime, illustration, painting, drawing, cgi, 3d render, digital art, oversaturated, close-up portrait, cropped, out of frame, duplicate animal, extra limbs, extra ears, fused features, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+        "style": "realistic",
         "data": {
-          "animal_type": "bird",
-          "breed": "Parrot",
-          "condition": "sick",
-          "environment": "home"
+          "animal_type": "cat",
+          "breed": "Ragdoll",
+          "condition": "elderly",
+          "environment": "veterinary clinic",
+          "prompt_override": "Full-body elderly Ragdoll cat standing naturally in a veterinary clinic, soft long fur, visible signs of age, realistic animal proportions, a veterinarian softly blurred in the background, documentary-style veterinary photo"
         }
       },
       "generation": {
         "paths": [
-          "outputs\\bird_Parrot_sick_1.png"
+          "outputs\\cat_Ragdoll_elderly_1.png"
         ],
-        "prompt": "Medical visualization of a Parrot bird with health condition in home, realistic photograph, high detail, professional photography, AI-generated illustration for educational purposes",
-        "negative_prompt": "blurry, low quality, distorted, ugly, deformed, disfigured, cartoon, anime, illustration, painting, drawing, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+        "prompt": "Full-body elderly Ragdoll cat standing naturally in a veterinary clinic, soft long fur, visible signs of age, realistic animal proportions, a veterinarian softly blurred in the background, documentary-style veterinary photo, realistic veterinary photograph, photorealistic, natural lighting, high detail, professional photography, AI-generated content for educational purposes",
+        "negative_prompt": "blurry, low quality, distorted, ugly, deformed, disfigured, bad anatomy, malformed face, asymmetrical eyes, cartoon, anime, illustration, painting, drawing, cgi, 3d render, digital art, oversaturated, close-up portrait, cropped, out of frame, duplicate animal, extra limbs, extra ears, fused features, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
         "data": {
-          "animal_type": "bird",
-          "breed": "Parrot",
-          "condition": "sick",
-          "environment": "home"
+          "animal_type": "cat",
+          "breed": "Ragdoll",
+          "condition": "elderly",
+          "environment": "veterinary clinic",
+          "prompt_override": "Full-body elderly Ragdoll cat standing naturally in a veterinary clinic, soft long fur, visible signs of age, realistic animal proportions, a veterinarian softly blurred in the background, documentary-style veterinary photo"
+        }
+      },
+      "evaluation": null
+    },
+    {
+      "sample_id": 1,
+      "data": {
+        "animal_type": "horse",
+        "breed": "Mustang",
+        "condition": "healthy",
+        "environment": "equine veterinary clinic",
+        "prompt_override": "Full-body healthy Mustang horse in an equine veterinary clinic, strong posture, vibrant coat, realistic anatomy, veterinary staff in the background, documentary-style veterinary photograph"
+      },
+      "prompt_data": {
+        "positive": "Full-body healthy Mustang horse in an equine veterinary clinic, strong posture, vibrant coat, realistic anatomy, veterinary staff in the background, documentary-style veterinary photograph, realistic veterinary photograph, photorealistic, natural lighting, high detail, professional photography, AI-generated content for educational purposes",
+        "negative": "blurry, low quality, distorted, ugly, deformed, disfigured, bad anatomy, malformed face, asymmetrical eyes, cartoon, anime, illustration, painting, drawing, cgi, 3d render, digital art, oversaturated, close-up portrait, cropped, out of frame, duplicate animal, extra limbs, extra ears, fused features, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+        "style": "realistic",
+        "data": {
+          "animal_type": "horse",
+          "breed": "Mustang",
+          "condition": "healthy",
+          "environment": "equine veterinary clinic",
+          "prompt_override": "Full-body healthy Mustang horse in an equine veterinary clinic, strong posture, vibrant coat, realistic anatomy, veterinary staff in the background, documentary-style veterinary photograph"
+        }
+      },
+      "generation": {
+        "paths": [
+          "outputs\\horse_Mustang_healthy_1.png"
+        ],
+        "prompt": "Full-body healthy Mustang horse in an equine veterinary clinic, strong posture, vibrant coat, realistic anatomy, veterinary staff in the background, documentary-style veterinary photograph, realistic veterinary photograph, photorealistic, natural lighting, high detail, professional photography, AI-generated content for educational purposes",
+        "negative_prompt": "blurry, low quality, distorted, ugly, deformed, disfigured, bad anatomy, malformed face, asymmetrical eyes, cartoon, anime, illustration, painting, drawing, cgi, 3d render, digital art, oversaturated, close-up portrait, cropped, out of frame, duplicate animal, extra limbs, extra ears, fused features, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+        "data": {
+          "animal_type": "horse",
+          "breed": "Mustang",
+          "condition": "healthy",
+          "environment": "equine veterinary clinic",
+          "prompt_override": "Full-body healthy Mustang horse in an equine veterinary clinic, strong posture, vibrant coat, realistic anatomy, veterinary staff in the background, documentary-style veterinary photograph"
+        }
+      },
+      "evaluation": null
+    },
+    {
+      "sample_id": 2,
+      "data": {
+        "animal_type": "rabbit",
+        "breed": "Lionhead",
+        "condition": "injured",
+        "environment": "veterinary clinic",
+        "prompt_override": "Full-body injured Lionhead rabbit in a veterinary clinic, visible minor injury on front leg, receiving care, realistic fur texture, realistic anatomy, a veterinarian in the background, documentary-style veterinary photo"
+      },
+      "prompt_data": {
+        "positive": "Full-body injured Lionhead rabbit in a veterinary clinic, visible minor injury on front leg, receiving care, realistic fur texture, realistic anatomy, a veterinarian in the background, documentary-style veterinary photo, realistic veterinary photograph, photorealistic, natural lighting, high detail, professional photography, AI-generated content for educational purposes",
+        "negative": "blurry, low quality, distorted, ugly, deformed, disfigured, bad anatomy, malformed face, asymmetrical eyes, cartoon, anime, illustration, painting, drawing, cgi, 3d render, digital art, oversaturated, close-up portrait, cropped, out of frame, duplicate animal, extra limbs, extra ears, fused features, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+        "style": "realistic",
+        "data": {
+          "animal_type": "rabbit",
+          "breed": "Lionhead",
+          "condition": "injured",
+          "environment": "veterinary clinic",
+          "prompt_override": "Full-body injured Lionhead rabbit in a veterinary clinic, visible minor injury on front leg, receiving care, realistic fur texture, realistic anatomy, a veterinarian in the background, documentary-style veterinary photo"
+        }
+      },
+      "generation": {
+        "paths": [
+          "outputs\\rabbit_Lionhead_injured_1.png"
+        ],
+        "prompt": "Full-body injured Lionhead rabbit in a veterinary clinic, visible minor injury on front leg, receiving care, realistic fur texture, realistic anatomy, a veterinarian in the background, documentary-style veterinary photo, realistic veterinary photograph, photorealistic, natural lighting, high detail, professional photography, AI-generated content for educational purposes",
+        "negative_prompt": "blurry, low quality, distorted, ugly, deformed, disfigured, bad anatomy, malformed face, asymmetrical eyes, cartoon, anime, illustration, painting, drawing, cgi, 3d render, digital art, oversaturated, close-up portrait, cropped, out of frame, duplicate animal, extra limbs, extra ears, fused features, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+        "data": {
+          "animal_type": "rabbit",
+          "breed": "Lionhead",
+          "condition": "injured",
+          "environment": "veterinary clinic",
+          "prompt_override": "Full-body injured Lionhead rabbit in a veterinary clinic, visible minor injury on front leg, receiving care, realistic fur texture, realistic anatomy, a veterinarian in the background, documentary-style veterinary photo"
         }
       },
       "evaluation": null

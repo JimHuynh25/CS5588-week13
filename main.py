@@ -27,11 +27,34 @@ def get_env_int(name: str, default: int) -> int:
         print(f"Ignoring invalid {name}={value!r}; using {default}.")
         return default
 
+def get_env_choice(name: str, default: str, valid_choices: List[str]) -> str:
+    """Read a constrained string setting from an environment variable."""
+    value = os.getenv(name)
+    if value is None:
+        return default
+
+    normalized = value.strip().lower()
+    if normalized in valid_choices:
+        return normalized
+
+    print(f"Ignoring invalid {name}={value!r}; using {default}.")
+    return default
+
+def get_env_path(name: str) -> str | None:
+    """Read a path setting from an environment variable."""
+    value = os.getenv(name)
+    if value is None:
+        return None
+
+    path = value.strip()
+    return path or None
+
 def run_experiment(data_samples: List[Dict[str, Any]],
                   use_controlnet: bool = False,
                   output_dir: str = "outputs",
                   demo_mode: bool = True,
                   model_id: str = "segmind/tiny-sd",
+                  image_style: str = "realistic",
                   num_variations: int = 1,
                   image_size: int = 384,
                   num_inference_steps: int = 12,
@@ -60,7 +83,7 @@ def run_experiment(data_samples: List[Dict[str, Any]],
         print(f"Processing sample {i+1}/{len(data_samples)}: {data}")
 
         # Generate structured prompt
-        prompt_data = prompt_gen.create_structured_prompt(data)
+        prompt_data = prompt_gen.create_structured_prompt(data, style=image_style)
 
         if demo_mode:
             # In demo mode, just show prompts
@@ -185,19 +208,27 @@ def main():
     num_inference_steps = get_env_int("INFERENCE_STEPS", 12)
     evaluate_images = get_env_bool("EVALUATE_IMAGES", False)
     model_id = os.getenv("MODEL_ID", "segmind/tiny-sd")
+    image_style = get_env_choice("IMAGE_STYLE", "realistic", ["realistic", "educational", "artistic"])
 
     # Load or generate data
     loader = AnimalDataLoader()
-    data_samples = loader.generate_sample_data(sample_count)
+    input_json = get_env_path("INPUT_JSON")
+    if input_json:
+        data_samples = loader.load_from_json(input_json)
+    else:
+        data_samples = loader.generate_sample_data(sample_count)
 
     print("Animal Care Visualization System")
     print("=" * 50)
     print(f"Processing {len(data_samples)} data samples")
+    if input_json:
+        print(f"Input file: {input_json}")
     print()
 
     if generate_images:
         print("Running in IMAGE GENERATION MODE (low-memory defaults)")
         print(f"Model: {model_id}")
+        print(f"Image style: {image_style}")
         print(f"Images per sample: {num_variations}")
         print(f"Image size: {image_size}x{image_size}")
         print(f"Inference steps: {num_inference_steps}")
@@ -210,6 +241,7 @@ def main():
         output_dir=output_dir,
         demo_mode=not generate_images,
         model_id=model_id,
+        image_style=image_style,
         num_variations=num_variations,
         image_size=image_size,
         num_inference_steps=num_inference_steps,
@@ -237,7 +269,7 @@ def main():
     else:
         print("\nTo run with low-memory image generation:")
         print("Run: python main.py")
-    print("\nLow-memory settings can be changed with MODEL_ID, IMAGE_SIZE, INFERENCE_STEPS, SAMPLE_COUNT, and NUM_VARIATIONS.")
+    print("\nLow-memory settings can be changed with MODEL_ID, IMAGE_STYLE, IMAGE_SIZE, INFERENCE_STEPS, SAMPLE_COUNT, and NUM_VARIATIONS.")
 
 if __name__ == "__main__":
     main()
