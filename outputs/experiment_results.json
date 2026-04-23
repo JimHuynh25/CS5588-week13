@@ -3,62 +3,35 @@
     {
       "sample_id": 0,
       "data": {
-        "animal_type": "horse",
-        "breed": "Appaloosa",
-        "condition": "malnourished",
+        "animal_type": "bird",
+        "breed": "Parrot",
+        "condition": "sick",
         "environment": "home"
       },
       "prompt_data": {
-        "positive": "Illustrative depiction of malnutrition in Appaloosa horse in home, realistic photograph, high detail, professional photography, AI-generated illustration for educational purposes",
+        "positive": "Medical visualization of a Parrot bird with health condition in home, realistic photograph, high detail, professional photography, AI-generated illustration for educational purposes",
         "negative": "blurry, low quality, distorted, ugly, deformed, disfigured, cartoon, anime, illustration, painting, drawing, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
         "data": {
-          "animal_type": "horse",
-          "breed": "Appaloosa",
-          "condition": "malnourished",
+          "animal_type": "bird",
+          "breed": "Parrot",
+          "condition": "sick",
           "environment": "home"
         }
       },
-      "demo_mode": true
-    },
-    {
-      "sample_id": 1,
-      "data": {
-        "animal_type": "cat",
-        "breed": "Persian",
-        "condition": "sick",
-        "environment": "wild"
-      },
-      "prompt_data": {
-        "positive": "Illustrative image of an unwell Persian cat in wild, educational purpose, realistic photograph, high detail, professional photography, AI-generated illustration for educational purposes",
-        "negative": "blurry, low quality, distorted, ugly, deformed, disfigured, cartoon, anime, illustration, painting, drawing, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
+      "generation": {
+        "paths": [
+          "outputs\\bird_Parrot_sick_1.png"
+        ],
+        "prompt": "Medical visualization of a Parrot bird with health condition in home, realistic photograph, high detail, professional photography, AI-generated illustration for educational purposes",
+        "negative_prompt": "blurry, low quality, distorted, ugly, deformed, disfigured, cartoon, anime, illustration, painting, drawing, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
         "data": {
-          "animal_type": "cat",
-          "breed": "Persian",
+          "animal_type": "bird",
+          "breed": "Parrot",
           "condition": "sick",
-          "environment": "wild"
+          "environment": "home"
         }
       },
-      "demo_mode": true
-    },
-    {
-      "sample_id": 2,
-      "data": {
-        "animal_type": "cat",
-        "breed": "Persian",
-        "condition": "sick",
-        "environment": "zoo"
-      },
-      "prompt_data": {
-        "positive": "Medical visualization of a Persian cat with health condition in zoo, realistic photograph, high detail, professional photography, AI-generated illustration for educational purposes",
-        "negative": "blurry, low quality, distorted, ugly, deformed, disfigured, cartoon, anime, illustration, painting, drawing, human, person, people, crowd, text, watermark, violent, scary, frightening, harmful, dangerous",
-        "data": {
-          "animal_type": "cat",
-          "breed": "Persian",
-          "condition": "sick",
-          "environment": "zoo"
-        }
-      },
-      "demo_mode": true
+      "evaluation": null
     }
   ]
 }
